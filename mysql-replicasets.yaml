@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: mysql-replicaset
+  labels:
+   app: mysql 
+spec:
+  replicas: 1   # Change this line to set the desired number of replicas
+  selector:
+    matchLabels:
+      app: mysql
+  template:
+    metadata:
+      labels:
+        app: mysql
+    spec:
+      containers:
+      - name: sql-container
+        image: 945233852280.dkr.ecr.us-east-1.amazonaws.com/mysqlrepo:v0.0
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: vbbarot
+        ports:
+        - containerPort: 3306
