@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: web-app-pod
+  namespace: webapp-namespace
+  labels:
+   app: employees 
+spec:
+  containers:
+  - name: web-app-container
+    image: 945233852280.dkr.ecr.us-east-1.amazonaws.com/apprepo:v0.0
+    env:
+    - name: DBPORT
+      value: "3306"
+    - name: DBHOST
+      value: 10.244.0.31
+    - name: DBUSER
+      value: root
+    - name: DBPWD
+      value: vbbarot
+    ports:
+    - containerPort: 8080
