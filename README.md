@@ -17,7 +17,7 @@ kubectl port-forward web-app-pod 8080:8080 -n webapp-namepace
 curl localhost:8080
 kubectl logs sql-pod -n mysql-namespace
 kubectl logs web-app-pod -n webapp-namespace
-```bash
+```
 
 Task 3:
 ```bash
