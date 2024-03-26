@@ -1,10 +1,12 @@
-Task 1:
+Task 1:  
+```bash
 sudo systemctl start docker
 docker ps
 kubectl get all -n kube-system
 kubectl describe pod/kube-apiserver-kind-control-plane 
 kubectl get all -n webapp-namespace
 kubectl get all -n mysql-namespace
+```
 
 Task2 :
 
